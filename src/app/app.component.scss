@@ -400,9 +400,7 @@ img {
   }
 }
 
-
-
-@media (max-width: 450px) {
+@media (max-width: 700px) {
   .main-container {
     background: linear-gradient(-45deg, $bgcolorlb1, $bgcolorlb2, $bgcolorlb3, $bgcolorlb4);
     background-size: 400% 400%;
@@ -411,6 +409,12 @@ img {
     height: 100%;
     position: relative;
   }
+}
+
+
+
+@media (max-width: 450px) {
+
 
   .minibio h3 {
     font-size: 20px;
