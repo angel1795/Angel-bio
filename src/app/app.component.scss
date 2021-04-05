@@ -113,7 +113,7 @@
   margin-top: 25px;
 
   .link-box {
-    background: linear-gradient(45deg, $bgcolor4, $bgcolor3, $bgcolor2, $bgcolor1);
+    background: linear-gradient(45deg, $bgcolorlb4, $bgcolorlb3, $bgcolorlb2, $bgcolorlb1);
     background-size: 400% 400%;
     animation: gradient 20s ease infinite;
     -webkit-border-radius: 7px 7px 7px 7px;
@@ -403,7 +403,20 @@ img {
 
 
 @media (max-width: 450px) {
-
+  .link-box {
+    background: linear-gradient(45deg, $bgcolorlb4, $bgcolorlb3, $bgcolorlb2, $bgcolorlb1);
+    background-size: 400% 400%;
+    animation: gradient 20s ease infinite;
+    -webkit-border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    border-radius: 7px 7px 7px 7px;
+    height: 4rem;
+    width: 240px;
+    max-width: 240px;
+    margin: 27px auto;
+    -webkit-box-shadow: 2px -1px 20px 13px rgba(54, 54, 54, 0.103);
+    box-shadow: 2px -1px 20px 13px rgba(5, 5, 5, 0.103);
+  }
 
   .minibio h3 {
     font-size: 20px;
