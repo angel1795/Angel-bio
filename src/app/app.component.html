@@ -1,0 +1,55 @@
+<div [ngClass]="{ 'main-container': buttonMode,'main-container-dark': !buttonMode }">
+
+  <!-- Botón modo oscuro -->
+  <div class="toggle-mode">
+    <button [ngStyle]="{'background-color':toggleColor}" (click)="toggleMode()">
+      <fa-icon [icon]="pathToggle" ></fa-icon>
+
+    </button>
+  </div>
+
+  <!-- Títulos y redes -->
+  <div class="minibio">
+    <img src="../assets/img/angelwork.jpeg" alt="Ángel Martín"
+      [ngClass]="{ 'img-profile': buttonMode,'img-profile-dark': !buttonMode }">
+    <h3 [ngStyle]="{'color': letterColor}">Ángel Martín Paule</h3>
+    <h1 class="tracking-in-expand" [ngStyle]="{'color': letterColor}">Fullstack Developer <span>🖥️</span></h1>
+    <p [ngStyle]="{'color': letterColor}">Aquí todos mis links oficiales <span>⬇️</span></p>
+
+    <div class="social-box">
+      <div *ngFor="let red of redes" [ngClass]="{ 'link-box': buttonMode,'link-box-dark': !buttonMode }">
+        <a href="{{red.url}}" target="_blank" class="on-hover"
+          [ngClass]="{ 'on-hover': buttonMode,'on-hover-dark': !buttonMode }">
+          <div class="left-item">
+            <fa-icon [icon]="red.icon"  class="img-network"></fa-icon>
+          </div>
+          <div class="right-item">
+            {{red.name}}
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- Skills -->
+  <div [ngStyle]="{'background-color':bgColorSkills}" class="skills-box">
+    <div class="row">
+      <div *ngFor="let skill of skills" class="col-xl-2 col-lg-4 col-md-5">
+        <div class="skill-box" [ngStyle]="{'background-color':buttonMode?skill.bgcolor:skill.bgcolord}" >
+          <div class="content-skill">
+            <img class="img-skill" src="{{skill.icon}}" alt="">
+            <h2 class="title-skill">{{skill.name}}</h2>
+
+            <div class="row">
+              <div *ngFor="let sk of skill.content" class="col">
+                <p [ngStyle]="{'background-color': skill.bgcolor}">{{sk}}</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
